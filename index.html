@@ -9,6 +9,38 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 20px;
+}
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #FEE19E;
+}
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #ffc107;
+}
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  background-color: #FFFFFF;
+  border-top: none;
+}
 </style>
 </head>
 <body style="background-color:darkgray;" class="w3-text-grey">
@@ -25,7 +57,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
     
       <div class="w3-white w3-text-grey w3-card-4">
         <div class="w3-display-container">
-          <img src="personal/headshot.jpg" style="width:100%">
+          <img src="personal/headshot.jpg" alt="headshot" style="width:100%">
         </div>
         <div class="w3-container">
           <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-amber"></i>Data Translation & Health Policy</p>
@@ -34,33 +66,6 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
           <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-amber"></i>2033830043</p>
           <p><i class="fa fa-linkedin fa-fw w3-margin-right w3-large w3-text-amber"></i>www.linkedin.com/in/varsha-krish/</p>
           <hr>
-
-<!---          	<div style="float: left; width: 50%;">
-          	<p class="w3-xxlarge"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-amber"></i>Skills</b></p>
-          		<ul>
-          		<li>Project Management</li>
-          		<li>Policy Analysis</li>
-          		<li>Data Analysis</li>
-          		<li>Network Management</li>
-          		<li>Event Planning</li>
-          		</ul>
-          	</div>
-         
-         <div style="float: right; width: 50%;">
-          <p class="w3-large"><b><i class="fa fa-laptop fa-fw w3-margin-right w3-text-amber"></i>Code</b></p>
-          <ul>
-          	<li>R</li> 
-          	<li>Python</li>
-          	<li>SQL</li>
-          	<li>Stata</li>
-          	<li>SPSS</li>
-          	<li>HTML</li>
-          	<li>Tableau</li>
-          </ul>
-    	  </div>
-		 <br>
-    	</div>
---->
 
 <!-- Skills Columns -->
 <div style="float: left; width: 70%;">
@@ -95,23 +100,29 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 <div class="w3-container">
    <h3 class="w3-text-grey w3-padding-1"><b>Education</b></h3>
 
-      <h6 class="w3-opacity w3-text-deep-purple"><b>Evans School of Public Policy & Governance</b></h6>
-      <p><i class="w3-text-black"></i><i class="fa fa-calendar fa-fw w3-margin-right"></i>Oct 2020 - June 2022</p>
-      <p><i class="w3-text-balck"></i><i class="fa fa-location-arrow fa-fw w3-margin-right"></i>Seattle, WA</p>
+   	<h6 class="w3-text-deep-purple"> 
+      <img src="personal/uw_seal.png" alt="UW Evans Seal" style="width:50px;height:50px;" style="float:left">
+      <b>&nbsp;&nbsp; Evans School of Public Policy & Governance</b></h6>
+      <p><i class="w3-text-black"></i><i class="fa fa-calendar fa-fw w3-margin-right"></i>Oct 2020 - June 2022 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      	<i class="fa fa-location-arrow fa-fw w3-margin-right"></i>Seattle, WA</p>
       <p>The University of Washington | Master's of Public Administration (MPA)</p>
       <p><i>Concentration: Leadership & Decision Making</i></p>
       <hr>
 
-      <h6 class="w3-opacity w3-text-indigo"><b>Barnard College</b></h6>
-      <p><i class="w3-text-black"></i><i class="fa fa-calendar fa-fw w3-margin-right"></i>Sept 2013 - May 2015</p>
-      <p><i class="w3-text-black"></i><i class="fa fa-location-arrow fa-fw w3-margin-right"></i>New York, NY</p>
+      <h6 class="w3-text-indigo">
+      <img src="personal/barnard_seal.svg" alt="UW Evans Seal" style="width:50px;height:50px;" style="float:left">
+      <b>&nbsp;&nbsp; Barnard College</b></h6>
+      <p><i class="w3-text-black"></i><i class="fa fa-calendar fa-fw w3-margin-right"></i>Sept 2013 - May 2015 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      	<i class="fa fa-location-arrow fa-fw w3-margin-right"></i>New York, NY</p>
       <p>Columbia University | Bachelors of Arts (BA)</p>
       <p><i>Major: Cellular, Molecular Neuroscience</i></p>
       <hr>
 
-      <h6 class="w3-opacity w3-text-red"><b>Hopkins School</b></h6>
-      <p><i class="w3-text-black"></i><i class="fa fa-calendar fa-fw w3-margin-right"></i>Class of 2013</p>
-      <p><i class="w3-text-black"></i><i class="fa fa-location-arrow fa-fw w3-margin-right"></i>New Haven, CT</p>
+      <h6 class="w3-text-red">
+      <img src="personal/hopkins_seal.jpeg" alt="UW Evans Seal" style="width:50px;height:50px;" style="float:left">
+      <b>&nbsp;&nbsp; Hopkins School</b></h6>
+      <p><i class="w3-text-black"></i><i class="fa fa-calendar fa-fw w3-margin-right"></i>Class of 2013 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      	<i class="fa fa-location-arrow fa-fw w3-margin-right"></i>New Haven, CT</p>
       <p>High School</p><br>
 
   </div>
@@ -125,48 +136,87 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 
     <!-- Right Column -->
     <div class="w3-twothird">
-
     
-      <div class="w3-container w3-card w3-white w3-margin-bottom">
-      	<h1 class="w3-text-black w3-padding-16">Varsha S. Krish | something_tbd</h1>
-      </div>
+    <!-- big name header -->
+	  <div class="w3-container w3-card w3-white w3-margin-bottom">
+	  	<h1 class="w3-text-black w3-padding-16">Varsha Sarah Krish  </h1>
+	  </div>
 
+	<!-- short about-me blurb -->
+	  <div class="w3-container w3-card w3-white w3-margin-bottom">
+	 	 <p><i class="w3-text-black"></i>I have a foundation in neuroscience research and data-driven health policy. I sought to further develop my skills through a master's in public administration with a focus on leadership and decision-making. I am passionate about the intersection between technology and health and help manage the interphase between scientific discovery and meaningful action. </p>
+	 	</div>
 
-      <div class="w3-container w3-card w3-white w3-margin-bottom">
-     	 <p><i class="w3-text-black"></i>If i were to have a blurb about myself it would go here... time to write aobut some passions? I'm going to put some filler text here for now...</p>
-     	 <p><i class="w3-text-black"></i>I have a foundation in neuroscience research and data-driven health policy. I sought to further develop my skills through a master's in public administration with a focus on leadership and decision-making. I am passionate about the intersection between technology and health and believe I would be an ideal fit for this position. </p>
-     	 <p><i class="w3-text-black"></i>I recently completed my Master's in public administration & public policy. I focused on nonprofit management & decision-making and worked on the Project Management Team at King County, WA. Prior to my Master's I worked for a few years as a data analyst at a global health modeling nonprofit where I primarily did data visualization work and served as a technical advisor for external stakeholders. </p>
-      </div>
+		<div class="tab">
+		  <button class="tablinks" onclick="openCity(event, 'Work Experience')" id="defaultOpen">Work Experience</button>
+		  <button class="tablinks" onclick="openCity(event, 'Publications')">Publications</button>
+		  <button class="tablinks" onclick="openCity(event, 'About Me')">About Me</button>
+		</div>
 
-		<div class="w3-container w3-card w3-white w3-margin-bottom">
-        <h3 class="w3-text-grey w3-padding-4"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-amber"></i>Work Experience</h3>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>Student Consultant | WA DOH</b></h5>
+		<div id="Work Experience" class="tabcontent">
+		  <h5 class="w3-opacity"><b>Student Consultant | WA DOH</b></h5>
           <h6 class="w3-text-black"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Dec 2021 - June 2022</h6>
           <p>As a member of a 4-person consulting team for the Washington State Department of Health (DOH), I co-produced a 92-page technical white paper on key health metrics and processes to establish Health Equity Zones in Washington State</p>
           <hr>
-        </div>
-        <div class="w3-container">
           <h5 class="w3-opacity"><b>Project Management Intern | King County PSB</b></h5>
           <h6 class="w3-text-black"><i class="fa fa-calendar fa-fw w3-margin-right"></i>May 2021 - Oct 2021</h6>
           <p>As a graduate intern in the King County office of Performance, Strategy, and Budgeting (PSB), I managed schedule development and community session management for Executive Priority projects including the 2021 Sheriff Transition and the County Jail Health Services Community Diversion Program.</p>
           <p>Additionally, I attended a 7-week project management and risk management skills course covering strategies from Lean and Continuous Improvement management courses.</p> 
           <hr>
-        </div>
-        <div class="w3-container">
           <h5 class="w3-opacity"><b>Data Analyst, Engagement | IHME</b></h5>
           <h6 class="w3-text-black"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2018 - July 2020</h6>
           <p>I provided custom analysis of Institute for Health Metrics and Evaluation (IHME) health data to members of our engagment network and spearhead process-reviews and -improvements using data.</p> 
   		  <p>I organized the first staff retreat for the Network Engagement Team to manage organizational changes and refine KPI/AQL reporting metrics, led meetings, collaborated with peers, liaised with stakeholders and reported to leadership.</p>
           <p> I volunteered as an institutional code tutor for R language and was awarded the 2019 Community Builder institutional award </p>
-           <hr>
-        </div>
-        <div class="w3-container">
+          <hr>
           <h5 class="w3-opacity"><b>Research Assistant| NYSPI</b></h5>
           <h6 class="w3-text-black"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2014 - May 2017</h6>
           <p>As a research assisstant at the New York State Psychiatric Institute, I conducted research to determine whether stress during different points of development affects the brain’s ability to recover in mouse models. Completed published undergraduate honors thesis research project.</p> <br>
-        </div>
-      </div>
+		</div>
+
+		<div id="Publications" class="tabcontent">
+		  <h4>Peer-Reviewed Publications</h4>
+		  <p>-	Youssef M., <mark>Krish VS.</mark>, Kirshenbaum GS., Atsak P., Lass TJ., Lieberman SR., Leonardo ED., and Dranovsky A. “Ablation of proliferating neural stem cells during early life is sufficient to reduce adult hippocampal neurogenesis.” Hippocampus 28.8 (2018): 586-601</p>
+		  <p>-	Mokdad AH., Mensah GA., <mark>Krish VS.</mark>, Glenn SD., Miller-Petrie MK., Lopez AD., and Murray CJL. “Global, Regional, National, and Subnational Big Data to Inform Health Equity Research: Perspectives from the Global Burden of Disease Study 2017.” Ethn Dis 29.Supp1 (2019) 159-172</p>
+		  <p>-	Achoki T., Miller-Petrie MK., Glenn SD., <mark>[et al, including Krish, VS]</mark> “Health disparities across the counties of Kenya and implications for policy makers, 1990-2016: a systematic analysis for the Global Burden of Disease Study 2016.” Lancet Glob Health 7.1 (2019) e81-e95</p>
+		  <p>-	Soriano JB., Rojas-Rueda D., Alonso J., <mark>[et al, including Krish, VS]</mark> “The burden of disease in Spain: Results from the Global Burden of Disease 2016.” Med Clin (Barc) 151.5 (2018): 171-190</p>
+		  <p>-	India State-Level Disease Burden Initiative Air Pollution Collaborators. “The impact of air pollution on deaths, disease burden, and life expectancy across the states of India: the Global Burden of Disease Study 2017.” Lancet Planet Health 3.1 (2019) e26-e39</p>
+		  <p>-	India State-Level Disease Burden Initiative Malnutrition Collaborators. “The burden of child and maternal malnutrition and trends in its indicators in the states of India: the Global Burden of Disease Study 1990-2017.” Lancet Child Adolesc Health ePub ahead of print. doi: 10.1016/S2352-4642(19)30273-1</p>
+		  <p>-	Zhou M., Wang H., <mark>[et al, including Krish, VS]</mark> “Mortality, morbidity, and risk factors in China and its provinces, 1990-2017: a systematic analysis for the Global Burden of Disease Study 2017.” Lancet 394.10204 (2019) 1145-1158</p>
+		  <p>-	Naghavi M., and Global Burden of Disease Self-Harm Collaborators. “Global, regional, and national burden of suicide mortality 1990 to 2016: systematic analysis for the Global Burden of Disease Study 2016.” BMJ 364.194 (2019)</p>
+		  <p>-	India State-Level Disease Burden Initiative Mental Disorders Collaborators. “The burden of mental disorders across the states of India: the Global Burden of Disease Study 1990–2017” The Lancet Psychiatry 7.2 (2019) 148-161</p>
+		  <p>-	El Bcheraoui C,. Mimche H., Miangotar Y., <mark>[et al including Krish, VS]</mark> “Burden of disease in francophone Africa, 1990–2017: a systematic analysis for the Global Burden of Disease Study 2017” Lancet Glob Health 8.3 (2020) e341-351</p>
+		  <p>-	GBD 2017 Saudi Arabia Collaborators. “The burden of disease in Saudi Arabia 1990–2017: results from the Global Burden of Disease Study 2017” Lancet Planet Health 4.5 (2020) e195-e208</p>
+		  <p>-	India State-Level Disease Burden Initiative Child Mortality Collaborators. “Subnational mapping of under-5 and neonatal mortality trends in India: the Global Burden of Disease Study 2000–17” Lancet 395.10237 (2020) 1640-1658</p>
+
+		  <h4>Other Published Work:</h4> 
+		  <p> -	Bathke, K., Brumbaugh, M., Coleman H., & <mark>Krish, V</mark> (2022). Health Equity Zones: A Washington State Department of Health Initiative [White paper].</p>
+		  <p>- Krish, V. S. (2020, Jan 17) <a class="highlight" target="_blank" href="https://www.thinkglobalhealth.org/article/united-states-has-mommy-issues/">The United States Has Mommy Issues</a>. <p>
+		</div>
+
+		<div id="About Me" class="tabcontent">
+		  <h3>Other Stuff</h3>
+		  <p>Text placeholder</p>
+		</div>
+
+		<script>
+		function openCity(evt, cityName) {
+		  var i, tabcontent, tablinks;
+		  tabcontent = document.getElementsByClassName("tabcontent");
+		  for (i = 0; i < tabcontent.length; i++) {
+		    tabcontent[i].style.display = "none";
+		  }
+		  tablinks = document.getElementsByClassName("tablinks");
+		  for (i = 0; i < tablinks.length; i++) {
+		    tablinks[i].className = tablinks[i].className.replace(" active", "");
+		  }
+		  document.getElementById(cityName).style.display = "block";
+		  evt.currentTarget.className += " active";
+		}
+
+		// Get the element with id="defaultOpen" and click on it
+		document.getElementById("defaultOpen").click();
+		</script>
 
     <!-- End Right Column -->
     </div>
@@ -177,8 +227,9 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
   <!-- End Page Container -->
 </div>
 
+
 <footer class="w3-container w3-amber w3-center w3-margin-top">
-  <p>Plz hire me! Plz</p>
+  <p>Thanks for visiting my website! Check back to see updates soon -Varsha (*＞ｖ＜)ゞ*゜</p>
 </footer>
 
 </body>
