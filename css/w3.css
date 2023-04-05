@@ -239,6 +239,7 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
   overflow: hidden;
   border: none;
   background-color: #ffffff;
+  display: flex;
 }
 /* Style the buttons inside the tab */
 .tab button {
@@ -248,9 +249,9 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
   border: none;
   outline: none;
   cursor: pointer;
-  padding: 14px 16px;
+  padding: 10px 6px;
   transition: 0.3s;
-  font-size: 20px;
+  font-size: 1.5vw
 }
 /* Change background color of buttons on hover */
 .tab button:hover {
@@ -275,16 +276,15 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 .header {
   position: relative;
   height: 80vh;
-  min-height: 600px;
+  width: 100%;
   background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../personal/header.jpeg);
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../personal/header.jpeg);
+ /* background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../personal/header.jpeg); */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   color: #fff;
 }
-
 .header .header-content {
   width: 100%;
   position: absolute;
@@ -295,7 +295,6 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
           transform: translateY(-50%);
   color: #fff;
 }
-
 .header .header-content .header-title {
   font-size: calc(15px + (120 - 40) * ((100vw - 300px) / (1600 - 300)));
   font-weight: bold;
@@ -304,13 +303,11 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
   padding-left: 20px;
   color: inherit;
 }
-
 .header .header-content .header-subtitle {
   font-weight: 200;
   font-size: calc(8px + (45 - 20) * ((100vw - 300px) / (1600 - 300)));
   padding-left: 30px;
 }
-
 .header .header-content .header-mono {
   letter-spacing: 5px;
   font-weight: 500;
@@ -318,6 +315,7 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
   margin-bottom: 40px;
   padding-left: 40px;
 }
+
 
 /* ABOUT SECTION */
 .skills-grid-container {
@@ -361,3 +359,53 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
   height: 1.5px;
   background-color: #a64d79;
 }
+
+
+/* MOBILE VS DESKTOP FORMATTING */
+.about-box {
+  display: flex;
+  flex-direction: row;
+  background: #F5F5F5;
+  padding: 5px;
+}
+
+.flex-about-left {
+  background-color: #F5F5F5;
+  justify-content: center;
+  padding: 20px;
+  flex: 33.33%;
+}
+
+.flex-about-center {
+  background-color: #FFFFF;
+  justify-content: center;
+  padding: 20px;
+  flex: 33.33%;
+}
+
+.flex-about-right {
+  background-color: #F5F5F5;
+  justify-content: center;
+  padding: 20px;
+  flex: 33.33%;
+}
+
+.flex-story-left {
+  background-color: #F5F5F5;
+  justify-content: center;
+  padding: 30px;
+  flex: 30%;
+}
+
+.flex-story-right {
+  background-color: #F5F5F5;
+  justify-content: left;
+  padding: 20px;
+  flex: 70%;
+}
+
+@media (max-width: 400px) {
+  .about-box {
+    flex-direction: column;
+  }
+} 
